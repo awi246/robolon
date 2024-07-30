@@ -1,0 +1,26 @@
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  .dark-mode header,
+  .dark-mode footer,
+  .dark-mode nav,
+  .dark-mode .container {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+  
+  .dark-mode .container {
+    border-color: #444;
+  }
+  
+  .dark-mode button,
+  .dark-mode a {
+    color: #ffffff;
+  }
+  
+  .dark-mode .shadow-lg {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  }
+  

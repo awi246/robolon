@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--tenant-color, #000); /* Default color */
+}
+
+/* Add this section to ensure all relevant text elements use the tenant color */
+a, h1, h2, h3, h4, h5, h6, p, span, div, li, button {
+  color: var(--tenant-color, #000);
+}
+
+/* If there are other elements or components that need the color, add them here */

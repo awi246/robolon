@@ -1,0 +1,165 @@
+
+.services-cards-container {
+  width: 100%;
+  padding: 2rem;
+}
+
+.services-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .services-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .services-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.services-card {
+  transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  border: 2px solid; /* Keep the tenant border color */
+}
+
+.services-card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.10, 1.10);
+}
+
+.services-card__img {
+  visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.services-card__info-hover {
+  position: absolute;
+  padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+}
+
+.services-card__img--hover {
+  transition: 0.2s all ease-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  top: 0;
+}
+
+.services-card:hover .services-card__img--hover {
+  height: 100%;
+  opacity: 0.3;
+}
+
+.services-card:hover .services-card__info {
+  background-color: transparent;
+  position: relative;
+}
+
+.services-card:hover .services-card__info-hover {
+  opacity: 1;
+}
+
+.services-card__info {
+  z-index: 2;
+  background-color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  padding: 16px 24px 24px 24px;
+}
+
+.services-card__category {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #868686;
+}
+
+.services-card__title {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.services-card__clock-info {
+  float: right;
+}
+
+.services-card__time {
+  font-size: 12px;
+  color: #AD7D52;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.services-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.services-popup-content {
+  position: relative;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.services-popup-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.services-popup-description {
+  margin-bottom: 1rem;
+}
+
+.services-popup-duration,
+.services-popup-price {
+  color: #4b5563;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+.services-popup-img {
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-top: 1rem;
+}
